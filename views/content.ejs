@@ -1,0 +1,60 @@
+<% include header %>
+<!--Central-->
+	<div id="Central" class="f_r">
+		<div class="m_post mb20">
+			<div class="m_post_top">
+    			<h2 class="m_post_top_title">
+    				<a href="#" title=""><%=post.title %></a>
+    			</h2>
+				<div class="m_post_top_text Con">
+					<%-post.content %>
+				</div>
+ 			</div>
+		  	<div class="post_mata">  	
+		  		<span class="post_cate">
+		          <a href="/category/<%= post.category %>" title="查看 美图 中的全部文章" rel="category"><%= post.category %></a>
+		        </span>
+		        <span class="post_mata_time mata_ico">
+		          <% 
+		            var date=new Date(parseInt(post.add_date));
+		            var year=date.getFullYear();
+		            var month=date.getMonth();
+		            var day=date.getDate();
+		          %>
+		          <a href="" title="<%=year+'-'+month+'-'+day %>" target="_blank"><%= month+'月'+day %>日</a>
+		        </span>
+		        <!--
+		          <span class="the_like mata_ico">
+		            <a href="" class="likeThis" id="like-209">0</a>
+		          </span>
+		          <span class="the_comments mata_ico">
+		            <a href="" class="ds-thread-count">0</a>
+		          </span>
+		          <span class="the_views mata_ico">0</span>
+		        -->
+		         <br class="clearBoth">
+		  </div>
+		  <!-- 上下篇文章 -->
+		  <div class="post_page mb20">
+
+		  	<span>
+		  		<% if(prePost.hasOwnProperty('post_id')){ %>
+		  		上一篇: 
+		  		<a href="/post/<%=prePost.post_id%>" rel="prev"><%=prePost.title%></a>
+		  		<% }else{%>
+		  		上一篇: 无
+		  		<%}%>
+		  	</span> 
+		  	
+		  	<span><% if(nextPost.hasOwnProperty('post_id')){%>
+		  		下一篇: 
+		  		<a href="/post/<%=nextPost.post_id%>" rel="next"><%=nextPost.title%></a>
+		  		<%}else{%>
+		  		下一篇: 无
+		  		<%}%>
+		  	</span>  
+
+		  </div>
+		</div>
+	<!--/Central-->
+<% include footer %>

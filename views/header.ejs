@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+	<title><%=locals.title %> | <%=locals.blog_name%> </title>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="/public/stylesheets/reset.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="/public/stylesheets/style.css" media="screen"/>
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+	<div id="Container" class="thewidth">
+		<!-- Header -->
+		<div id="Header" class="f_l">
+			<!-- head logo -->
+			<div id="Head">
+				<div id="Logo">
+					<a href="/" >
+						<img src="/public/images/logo_96x96.png" class="avatar avatar-96 photo">
+					</a>
+				</div>
+				<h1 id="Web_Title">
+					<a href="/" title="silenceper博客">sielnceper</a>
+				</h1>
+			</div>
+			<div class="head_text">
+				<h2 id="Web_Description">silenceper博客</h2>
+			</div>
+			<!--Menu-->
+			<div id="Menu">
+				<div>
+					<ul clas="menu">
+					<% locals.sidebar.category.forEach(function(cate,index){ %>
+						<li>
+							<a href="/category/<%=cate.category%>"><%=cate.category%></a>
+						</li>
+					<%}) %>
+					</ul>
+				</div>
+			</div>
+			<!-- search -->
+			<div id="header_seach">
+				<form method="get" id="searchform" action="">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tbody>
+							<tr>
+								<td>
+									<input class="searchInput" type="text" name="s" id="s" placeholder="搜索">
+								</td>
+								<td>
+									<input id="searchsubmit" class="searchBtn" type="submit" title="搜索" value="">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+			<!-- cops -->
+			<div id="Copys">
+				©&nbsp;<a href="#">silenceper&nbsp;</a>
+				<br>&nbsp;Powered by&nbsp;
+				<a href="http://silenceper.com/">silenceper</a>
+			</div>
+		</div>
+		<!--/Header-->

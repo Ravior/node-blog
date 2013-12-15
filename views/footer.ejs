@@ -1,0 +1,82 @@
+<br class="clearBoth">
+		<div id="to_top"></div>
+	</div>
+	<script type="text/javascript" src="/public/javascripts/jquery.lazyload.min.js"></script>
+	<script type="text/javascript" src="/public/javascripts/main.js"></script>
+	
+	<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushAS3.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushBash.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushColdFusion.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://silenceper.com/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushClojure.js?ver=20090602'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushCpp.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushCSharp.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushCss.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushDelphi.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushDiff.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushErlang.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://silenceper.com/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushFSharp.js?ver=20091003'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushGroovy.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushJava.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushJavaFX.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushJScript.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://silenceper.com/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushLatex.js?ver=20090613'></script>
+<script type='text/javascript' src='http://silenceper.com/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushMatlabKey.js?ver=20091209'></script>
+<script type='text/javascript' src='http://silenceper.com/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushObjC.js?ver=20091207'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushPerl.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushPhp.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushPlain.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushPowerShell.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushPython.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='http://silenceper.com/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushR.js?ver=20100919'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushRuby.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushScala.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushSql.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushVb.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='/public/javascripts/syntaxhighlighter/shBrushXml.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "/public/javascripts/syntaxhighlighter/shCore.css?ver=3.0.83c";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "/public/javascripts/syntaxhighlighter/shThemeDefault.css?ver=3.0.83c";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '帮助';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = '无法找到Brush：';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush不能设置 html-script选项';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = 1;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.defaults['wrap-lines'] = false;
+	SyntaxHighlighter.all();
+</script>
+<script type="text/javascript">
+		$(document).ready(function(){
+			$("#Central img").lazyload({
+				effect : "fadeIn",
+				failurelimit : 5
+			});
+		});
+	</script>
+</body>
+</html>

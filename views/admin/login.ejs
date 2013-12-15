@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员登入</title>
+    <link rel="stylesheet" href="/public/admin/styles/vendor/pure-min.css" />
+    <link rel="stylesheet" href="/public/admin/styles/style.css" />
+</head>
+<body>
+    <section class="container medium">
+        <div class="wrapper" id="login">
+            <div class="alert alert-error hide" id="error_mesg">
+                
+            </div>
+            <div class="grid">
+                <header>
+                    <h1>管理员登陆</h1>
+                </header>
+                <form action="" class="pure-form pure-form-aligned" method="post" id="loginForm">
+                    <div class="pure-control-group">
+                        <label for="username">用户名</label>
+                        <input type="text" name="username" id="username" class="pure-u-1-2"/>
+                    </div>
+                    <div class="pure-control-group">
+                        <label for="password">密码</label>
+                        <input type="password" name="password" id="password" class="pure-u-1-2" />
+                    </div>
+                    <div class="pure-controls">
+                        <button class="pure-button pure-button-primary" type="submit">登入</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+<script src="/public/admin/scripts/admin.js"></script>
+</html>

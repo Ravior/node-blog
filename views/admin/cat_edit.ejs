@@ -1,0 +1,21 @@
+<% include header %>
+<section id="main" class="pure-u-3-4">
+    <!-- 模块名字 -->
+    <header id="module-name">
+        <h2>修改分类</h2>
+    </header>
+    <!-- 模块内容 -->
+    <article id="module-content">
+        <form class="pure-form pure-form-stacked pure-u-g" method="post" id="category_add_form">
+            <div class="pure-control-group">
+                <label for="category">分类</label>
+                <input type="text" name="category" id="category" class="pure-u-1-2" value="<%=category.category%>"/>
+            </div>
+            <div class="pure-controls">
+                <input type="hidden" value="<%=category.cat_id%>" name="cat_id"/>
+                <button class="pure-button pure-button-primary pure-button" type="submit">修改</button>
+            </div>
+        </form>
+    </article>
+</section>
+<% include footer %>

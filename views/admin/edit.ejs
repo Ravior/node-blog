@@ -1,0 +1,51 @@
+<% include header %>
+<section id="main" class="pure-u-3-4">
+    <!-- 模块名字 -->
+    <header id="module-name">
+        <h2>文章修改</h2>
+    </header>
+    <!-- 模块内容 -->
+    <article id="module-content">
+        <form class="pure-form pure-form-stacked pure-u-g" method="post" id="add_post_form">
+            <div class="pure-control-group">
+                <label for="title">标题</label>
+                <input type="text" name="title" id="title" class="pure-u-1-2" value="<%=post.title%>"/>
+            </div>
+            <div class="pure-control-group">
+                <label for="title">分类</label>
+                <select name="category" class="pure-u-1-2">
+                	<%category.forEach(function(cat,index){%>
+                		<option value="<%=cat.cat_id%>" <%if(post.cat_id==cat.cat_id){%>selected<%}%>><%=cat.category%></option>
+                	<%})%>
+                </select>
+            </div>
+            <div class="pure-control-group">
+                <label for="content">内容</label>
+                <textarea name="content" id="content" class="pure-input-1" rows="20" style="resize:none"><%=post.content%></textarea>
+            </div>
+            <div class="pure-controls">
+                <input type="hidden" name="post_id" value="<%=post.post_id%>"/>
+                <button class="pure-button pure-button-primary pure-button" type="submit">添加</button>
+            </div>
+        </form>
+    </article>
+</section>
+<script charset="utf-8" src="/public/javascripts/editor/kindeditor.js"></script>
+<script charset="utf-8" src="/public/javascripts/editor/lang/zh_CN.js"></script>
+<script>
+        KindEditor.ready(function(K) {
+	        	var options = {
+			        themeType : 'simple',
+			        cssPath:'/public/stylesheets/editor.css',
+			        //文件上传调用  
+			        //?dir=image 图片   
+			        //?dir=file 文件   
+			        //?dir=flash  flash  
+			        //?dir=media 视音频
+			        uploadJson : '/admin/editor/upload'
+				};
+                window.editor = K.create('#content',options);
+
+        });
+</script>
+<% include footer %>
